@@ -39,7 +39,7 @@ public class sr_empleado extends HttpServlet {
             out.println("<title>Servlet sr_empleado</title>");            
             out.println("</head>");
             out.println("<body>");
-            empleado = new Empleado(Integer.valueOf(request.getParameter("txt_id")),request.getParameter("txt_tel"),Integer.valueOf(request.getParameter("drop_sexo")),request.getParameter("txt_nom"),request.getParameter("txt_ape"),request.getParameter("txt_dpi"),request.getParameter("date_fn"),request.getParameter("date_f-inicio"),request.getParameter("date_f-ingreso"),request.getParameter("txt_dir"),Integer.valueOf(request.getParameter("drop_puesto")));
+            empleado = new Empleado(Integer.valueOf(request.getParameter("txt_id")),request.getParameter("txt_tel"),Integer.valueOf(request.getParameter("drop_genero")),request.getParameter("txt_nom"),request.getParameter("txt_ape"),request.getParameter("txt_dpi"),request.getParameter("date_fn"),request.getParameter("date_f-inicio"),request.getParameter("date_f-ingreso"),request.getParameter("txt_dir"),Integer.valueOf(request.getParameter("drop_puesto")));
             
             if("agregar".equals(request.getParameter("btn_agregar"))){
                     if(empleado.agregar()>0){
@@ -49,25 +49,26 @@ public class sr_empleado extends HttpServlet {
                     out.println("<h1>xxxErrorXXxxx</h1>");
                 }
                 }
-            /*   
+            
             if("modificar".equals(request.getParameter("btn_modificar"))){
-                    if(estudiante.modificar()>0){
+                    if(empleado.modificar()>0){
                     response.sendRedirect("index.jsp");
                 }
                 else{
                     out.println("<h1>xxxErrorXXxxx</h1>");
                 }
                 }
+            
             if("eliminar".equals(request.getParameter("btn_eliminar"))){
-                    if(estudiante.eliminar()>0){
+                    if(empleado.eliminar()>0){
                     response.sendRedirect("index.jsp");
                 }
                 else{
                     out.println("<h1>xxxErrorXXxxx</h1>");
-                    out.println("<h2>Revisa por favor, no sea p*endejo</h2>");
+                    out.println("<h2>Revisa</h2>");
                 }
                 }
-            */
+            
             out.println("<h1>Servlet empleado!!!</h1>");
             out.println("</body>");
             out.println("</html>");

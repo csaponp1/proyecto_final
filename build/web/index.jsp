@@ -40,9 +40,9 @@
             </ul>
             
             <!-- empieza el body -->            
-            
+            <button type="button" class="btn-light"><a href="puestos.jsp">Manteminiento Puestos</a> </button>
         <br>  
-        <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#modalEmpleado">
+        <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#modalEmpleado" onclick="cls()">
             Agregar
         </button>
         
@@ -71,8 +71,8 @@
                         <input type="txt" name="txt_dpi" id="txt_dpi" placeholder="Ejemplo: xxxxxxxxxxxxx" class="form-control" required>
                         
                         
-                        <lable for="lbl_sexo"><b>sexo</b></lable>
-                        <select name ="drop_sexo" id="drop_sexo" class="form-select">
+                        <lable for="lbl_sexo"><b>Genero</b></lable>
+                        <select name ="drop_genero" id="drop_genero" class="form-select">
                             <option value="0">Femenino</option>
                             <option value="1">Masculino</option>
                         </select>
@@ -97,7 +97,8 @@
                         <input type="date" name="date_f-inicio" id="date_f-inicio" class="form-control">
                         
                         <label for="lbl_f-ingreso"><b>Fecha ingreso</b></label>
-                        <input type="text" name="date_f-ingreso" id="date_f-ingreso" class="form-control">
+                        <input type="date" name="date_f-ingreso" id="date_f-ingreso" class="form-control" value="">
+                       
                 
                         <br><button name="btn_agregar" id="btn_agregar" value="agregar" class="btn btn-primary">Agregar</button>
                             <button name="btn_modificar" id="btn_modificar" value="modificar" class="btn btn-success">Modificar</button>
@@ -110,7 +111,7 @@
             </div>
         </div>
        </div>
-            
+        <!--
         <div class="contanier mt-3">
             <h3 style="text-align:center">Tabla de Empleados registrados</h3>
             <br>
@@ -131,12 +132,37 @@
                   </thead>
                   <tbody id="tbl_empleados">
                     
-                        <%
+                        
+                    
+                  </tbody>
+              </table>
+          
+        </div>
+        -->
+        <br><!-- tabla -->
+        <h3 style="text-align: center">Tabla Empleados</h3>
+        <table class="table table-dark table-hover">
+            <thead>
+                <tr>
+                  <th>Nombres</th>
+                  <th>Apellidos</th>
+                  <th>Direccion</th>
+                  <th>Telefono</th>
+                  <th>DPI</th>
+                  <th>Genero</th>
+                  <th>Puesto</th>
+                  <th>Nacimiento</th>
+                  <th>Inicio labores</th>
+                  <th>Ingreso</th>
+                </tr>
+            </thead>
+            <tbody id="tbl_empleados">
+                <%
                         Empleado empleado = new Empleado();
                                 DefaultTableModel tabla = new DefaultTableModel();
                                 tabla=empleado.leer();
                                 for(int t = 0; t<tabla.getRowCount();t++){
-                                    out.println("<tr data-id="+tabla.getValueAt(t, 0)+" data-id_puesto="+tabla.getValueAt(t,11)+">");
+                                    out.println("<tr data-id="+tabla.getValueAt(t, 0)+" data-id_g="+tabla.getValueAt(t,11)+" data-id_p="+ tabla.getValueAt(t,12)+">");
                                     out.println("<td>"+tabla.getValueAt(t, 1)+"</td>");
                                     out.println("<td>"+tabla.getValueAt(t, 2)+"</td>");
                                     out.println("<td>"+tabla.getValueAt(t, 3)+"</td>");
@@ -151,10 +177,8 @@
                                 }
 
                         %>
-                    
-                  </tbody>
-              </table>
-        </div>
+            </tbody>
+        </table>
 
         <footer>
             <footer style="background-color: #ff3333">
@@ -182,36 +206,52 @@
         <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.min.js" integrity="sha384-cVKIPhGWiC2Al4u+LWgxfKTRIcfu0JTxR+EQDz/bgldoEyl4H0zUF0QKbrJ0EcQF" crossorigin="anonymous"></script>
         <script type="text/javascript">
                         $('#tbl_empleados').on('click','tr td',function(evt){
-                            var target,id,id_puesto,nombres,apellidos,direccion,telefono,dpi,genero,fn,fi,fm;
+                            var target,id,id_p,id_g,nom,ape,dir,tel,dpi,fn,fl,fi;
                             target = $(event.target);
-                            id= target.parent().data('id');
-                            id_puesto= target.parent().data('id_puesto');
+                            id = target.parent().data('id');
+                            id_g = target.parent().data('id_g');
+                            id_p = target.parent().data('id_p');
                             
-
-                            nombres = target.parent("tr").find("td").eq(0).html();
-                            apellidos = target.parent("tr").find("td").eq(1).html();
-                            direccion = target.parent("tr").find("td").eq(2).html();
-                            telefono = target.parent("tr").find("td").eq(3).html();
+                            nom = target.parent("tr").find("td").eq(0).html();
+                            ape = target.parent("tr").find("td").eq(1).html();
+                            dir = target.parent("tr").find("td").eq(2).html();
+                            tel = target.parent("tr").find("td").eq(3).html();
                             dpi = target.parent("tr").find("td").eq(4).html();
-                             //arreglar genero
-                            genero = target.parent("tr").find("td").eq(5).html();
-                            
-                            fn = target.parent("tr").find("td").eq(6).html();
-                            fi = target.parent("tr").find("td").eq(7).html();
-                            fm = target.parent("tr").find("td").eq(8).html();
+                            fn = target.parent("tr").find("td").eq(7).html();
+                            fl = target.parent("tr").find("td").eq(8).html();
+                            fi = target.parent("tr").find("td").eq(9).html();
                             $("#txt_id").val(id);
-                            $("#txt_nom").val(nombres);
-                            $("#txt_ape").val(apellidos);
-                            $("#txt_dir").val(direccion);
-                            $("#txt_tel").val(telefono);
+                            $("#txt_nom").val(nom);
+                            $("#txt_ape").val(ape);
+                            $("#txt_dir").val(dir);
+                            $("#txt_tel").val(tel);
                             $("#txt_dpi").val(dpi);
-                            $("#drop_sexo").val(genero);
-                            $("#drop_puesto").val(id_puesto);
                             $("#date_fn").val(fn);
-                            $("#date_f-inicio").val(fi);
-                            $("#date_f-ingreso").val(fm);
+                            $("#date_f-inicio").val(fl);
+                            $("#date_f-ingreso").val(fi);
+                            $("#drop_genero").val(id_g);
+                            $("#drop_puesto").val(id_p);
                             $("#modalEmpleado").modal('show');
                         });
+                    </script>
+                    <script type="text/javascript">
+                        function cls(){
+                        $("#txt_id").val(0);
+                            $("#txt_nom").val('');
+                            $("#txt_ape").val('');
+                            $("#txt_dir").val('');
+                            $("#txt_tel").val('');
+                            $("#txt_dpi").val('');
+                            $("#date_fn").val('');
+                            $("#date_f-inicio").val('');
+                            $("#date_f-ingreso").val('');
+                            $("#drop_genero").val(1);
+                            $("#drop_puesto").val(1);
+                 
+             }
+                        
+                        
+                        
                     </script>
     </body>
 </html>
