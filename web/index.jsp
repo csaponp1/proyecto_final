@@ -129,8 +129,8 @@
                       <th>Fecha ingreso</th>
                     </tr>
                   </thead>
-                  <tbody>
-                    <tr>
+                  <tbody id="tbl_empleados">
+                    
                         <%
                         Empleado empleado = new Empleado();
                                 DefaultTableModel tabla = new DefaultTableModel();
@@ -151,7 +151,7 @@
                                 }
 
                         %>
-                    </tr>
+                    
                   </tbody>
               </table>
         </div>
@@ -176,7 +176,42 @@
             </footer>
                
         </div>
+        
+         <script src="https://code.jquery.com/jquery-3.6.1.slim.js" integrity="sha256-tXm+sa1uzsbFnbXt8GJqsgi2Tw+m4BLGDof6eUPjbtk=" crossorigin="anonymous"></script>           
         <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js" integrity="sha384-IQsoLXl5PILFhosVNubq5LC7Qb9DXgDA9i+tQ8Zj3iwWAwPtgFTxbJ8NT4GN1R8p" crossorigin="anonymous"></script>
-            <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.min.js" integrity="sha384-cVKIPhGWiC2Al4u+LWgxfKTRIcfu0JTxR+EQDz/bgldoEyl4H0zUF0QKbrJ0EcQF" crossorigin="anonymous"></script>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.min.js" integrity="sha384-cVKIPhGWiC2Al4u+LWgxfKTRIcfu0JTxR+EQDz/bgldoEyl4H0zUF0QKbrJ0EcQF" crossorigin="anonymous"></script>
+        <script type="text/javascript">
+                        $('#tbl_empleados').on('click','tr td',function(evt){
+                            var target,id,id_puesto,nombres,apellidos,direccion,telefono,dpi,genero,fn,fi,fm;
+                            target = $(event.target);
+                            id= target.parent().data('id');
+                            id_puesto= target.parent().data('id_puesto');
+                            
+
+                            nombres = target.parent("tr").find("td").eq(0).html();
+                            apellidos = target.parent("tr").find("td").eq(1).html();
+                            direccion = target.parent("tr").find("td").eq(2).html();
+                            telefono = target.parent("tr").find("td").eq(3).html();
+                            dpi = target.parent("tr").find("td").eq(4).html();
+                             //arreglar genero
+                            genero = target.parent("tr").find("td").eq(5).html();
+                            
+                            fn = target.parent("tr").find("td").eq(6).html();
+                            fi = target.parent("tr").find("td").eq(7).html();
+                            fm = target.parent("tr").find("td").eq(8).html();
+                            $("#txt_id").val(id);
+                            $("#txt_nom").val(nombres);
+                            $("#txt_ape").val(apellidos);
+                            $("#txt_dir").val(direccion);
+                            $("#txt_tel").val(telefono);
+                            $("#txt_dpi").val(dpi);
+                            $("#drop_sexo").val(genero);
+                            $("#drop_puesto").val(id_puesto);
+                            $("#date_fn").val(fn);
+                            $("#date_f-inicio").val(fi);
+                            $("#date_f-ingreso").val(fm);
+                            $("#modalEmpleado").modal('show');
+                        });
+                    </script>
     </body>
 </html>
