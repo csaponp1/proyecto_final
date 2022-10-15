@@ -29,7 +29,7 @@
                   <a class="nav-link disabled" href="#">Inicio</a>
                 </li>
                 <li class="nav-item">
-                  <a class="nav-link" href="#">Puestos</a>
+                  <a class="nav-link" href="puestos.jsp">Puestos</a>
                 </li>
                 <li class="nav-item">
                   <a class="nav-link" href="#">sobre nosotros</a>
@@ -141,7 +141,7 @@
         -->
         <br><!-- tabla -->
         <h3 style="text-align: center">Tabla Empleados</h3>
-        <table class="table table-dark table-hover">
+        <table class="table table-danger table-hover">
             <thead>
                 <tr>
                   <th>Nombres</th>
@@ -248,10 +248,8 @@
                             $("#drop_genero").val(1);
                             $("#drop_puesto").val(1);
                  
-             }
-                        
-                        
-                        
+                        }
+
                     </script>
     </body>
 </html>

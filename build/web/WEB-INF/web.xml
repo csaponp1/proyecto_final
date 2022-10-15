@@ -4,9 +4,17 @@
         <servlet-name>sr_empleado</servlet-name>
         <servlet-class>controlador.sr_empleado</servlet-class>
     </servlet>
+    <servlet>
+        <servlet-name>sr_puesto</servlet-name>
+        <servlet-class>controlador.sr_puesto</servlet-class>
+    </servlet>
     <servlet-mapping>
         <servlet-name>sr_empleado</servlet-name>
         <url-pattern>/sr_empleado</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>sr_puesto</servlet-name>
+        <url-pattern>/sr_puesto</url-pattern>
     </servlet-mapping>
     <session-config>
         <session-timeout>
