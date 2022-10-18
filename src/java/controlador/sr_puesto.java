@@ -48,10 +48,10 @@ public class sr_puesto extends HttpServlet {
                     out.println("<h1>xxxErrorXXxxx</h1>");
                 }
                 }
-            /*
+            
             if("modificar".equals(request.getParameter("btn_modificar"))){
-                    if(empleado.modificar()>0){
-                    response.sendRedirect("index.jsp");
+                    if(puesto.modificar()>0){
+                    response.sendRedirect("puestos.jsp");
                 }
                 else{
                     out.println("<h1>xxxErrorXXxxx</h1>");
@@ -59,15 +59,15 @@ public class sr_puesto extends HttpServlet {
                 }
             
             if("eliminar".equals(request.getParameter("btn_eliminar"))){
-                    if(empleado.eliminar()>0){
-                    response.sendRedirect("index.jsp");
+                    if(puesto.eliminar()>0){
+                    response.sendRedirect("puestos.jsp");
                 }
                 else{
                     out.println("<h1>xxxErrorXXxxx</h1>");
                     out.println("<h2>Revisa</h2>");
                 }
                 }
-              */  
+              
             
            
            

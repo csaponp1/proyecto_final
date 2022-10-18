@@ -92,14 +92,14 @@ public class Puesto {
       try{
           cn = new Conexion();
           cn.abrir_conexion();
-          String query = "select idPuesto as id, puesto from puestos;";
+          String query = "select p.idPuesto as id, p.puesto from puestos as p;";
           ResultSet consulta = cn.conexionBD.createStatement().executeQuery(query);
           String encabezado[] = {"id","puesto"};
           tabla.setColumnIdentifiers(encabezado);
           String[] datos = new String[2];
           while(consulta.next()){
               datos[0]=consulta.getString("id");
-              datos[1]=consulta.getString("puestos");
+              datos[1]=consulta.getString("puesto");
               
               tabla.addRow(datos);
           }

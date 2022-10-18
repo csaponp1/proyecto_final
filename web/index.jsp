@@ -141,8 +141,9 @@
         -->
         <br><!-- tabla -->
         <h3 style="text-align: center">Tabla Empleados</h3>
-        <table class="table table-danger table-hover">
-            <thead>
+        
+        <table class="table table-hover">
+            <thead class="table-dark">
                 <tr>
                   <th>Nombres</th>
                   <th>Apellidos</th>
@@ -156,7 +157,7 @@
                   <th>Ingreso</th>
                 </tr>
             </thead>
-            <tbody id="tbl_empleados">
+            <tbody id="tbl_empleados" class="table-secondary">
                 <%
                         Empleado empleado = new Empleado();
                                 DefaultTableModel tabla = new DefaultTableModel();
@@ -179,6 +180,7 @@
                         %>
             </tbody>
         </table>
+        
 
         <footer>
             <footer style="background-color: #ff3333">
