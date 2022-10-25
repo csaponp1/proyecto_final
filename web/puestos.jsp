@@ -24,25 +24,32 @@
             
             <!-- nav -->
                 <ul class="nav justify-content-center">
-                    <li class="nav-item">
-                        <a class="nav-link" href="index.jsp">Inicio</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link disabled" href="#">Puestos</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#">Sobre nosotros</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#">Nuestras politicas</a>
-                    </li>
-                </ul>
+                <li class="nav-item">
+                  <a class="nav-link" href="index.jsp">Empleados</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link disabled" href="puestos.jsp">Puestos</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="proveedores.jsp">Proveedores</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="clientes.jsp">Clientes</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="productos.jsp">Productos</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="marcas.jsp">Marcas</a>
+                </li>
+            </ul>
         
         <!-- Inicio formulario -->
         <br>    
         <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#modalPuestos" onclick="cls()">
             Agregar
         </button>
+        <button type="button" name="btn_empleados" id="btn_empleados"  onclick="location.href='index.jsp';" class="btn btn-primary">Empleados</button>
             
             <div class="modal fade" id="modalPuestos" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
             <div class="modal-dialog">
@@ -94,28 +101,14 @@
                     </tbody>
                 </table>
             </div>
-            
-            
-        <footer style="background-color: #ff3333">
-            <div style="border-width: 2px; border-style: solid;border-color: #999999">
                 
-                <nav class="navbar navbar-expand-sm bg-light justify-content-center" style="padding-top: 15px;padding-bottom: 15px">
-                     <ul class="nav nav-tabs">
-                         <li class="nav item"><a class="nav-link" href="#"> Quienes Somos </a></li>
-                         <li class="nav item"> <a class="nav-link" href="#"> Siguenos en Twitter</a> </li>
-                         <li class="nav item"> <a class="nav-link" href="#"> Siguenos en Tiktok </a></li>
-                     </ul>
-                 </nav>     
-            </div>
-            <p style="font-family: times new roman; color: #ffffff">
-                Creado por Christian Sapon (c) 2022 Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce venenatis, nisl in viverra semper, nibh quam efficitur augue, et elementum ex dui eu libero. Maecenas pretium massa nibh, a dictum leo commodo tincidunt. Duis aliquet ornare ex ac ultricies. Aliquam ligula nibh, pellentesque a cursus nec, scelerisque ac nunc. Proin laoreet non purus et aliquet. Aenean vel euismod purus. Donec tempor diam a pretium dictum. Ut augue lacus, consectetur sit amet bibendum eget, euismod non nulla. Ut quis justo vel nibh consequat ullamcorper et et sapien. Nullam nec scelerisque nisi. Phasellus venenatis facilisis imperdiet. Vivamus ut felis non dolor pellentesque ornare.
-            </p>   
-        </footer>
-            
-            
-            
         </div>    
-        
+        <footer class="text-center text-white fixed-bottom" style="background-color:#BFBFBF;">
+        <div class="text-center p-3">
+        © 2022 Copyright:
+        <a class="text-white" href="https://okdiario.com/img/2022/01/21/5-rasgos-que-definen-la-personalidad-de-los-gatos.jpg" target="_blank">Grupo 3</a>
+        </div>   
+        </footer>
         
         <script src="https://code.jquery.com/jquery-3.6.1.slim.js" integrity="sha256-tXm+sa1uzsbFnbXt8GJqsgi2Tw+m4BLGDof6eUPjbtk=" crossorigin="anonymous"></script>           
         <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js" integrity="sha384-IQsoLXl5PILFhosVNubq5LC7Qb9DXgDA9i+tQ8Zj3iwWAwPtgFTxbJ8NT4GN1R8p" crossorigin="anonymous"></script>

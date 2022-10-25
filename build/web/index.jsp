@@ -26,25 +26,29 @@
             </header>
             <ul class="nav justify-content-center">
                 <li class="nav-item">
-                  <a class="nav-link disabled" href="#">Inicio</a>
+                  <a class="nav-link disabled" href="index.jsp">Empleados</a>
                 </li>
                 <li class="nav-item">
                   <a class="nav-link" href="puestos.jsp">Puestos</a>
                 </li>
                 <li class="nav-item">
-                  <a class="nav-link" href="#">sobre nosotros</a>
+                  <a class="nav-link" href="proveedores.jsp">Proveedores</a>
                 </li>
                 <li class="nav-item">
-                  <a class="nav-link" href="#">Nuestras politicas</a>
+                  <a class="nav-link" href="clientes.jsp">Clientes</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="productos.jsp">Productos</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="marcas.jsp">Marcas</a>
                 </li>
             </ul>
             
-            <!-- empieza el body -->            
-            <button type="button" class="btn-light"><a href="puestos.jsp">Manteminiento Puestos</a> </button>
+            <!-- empieza el body -->                                   
         <br>  
-        <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#modalEmpleado" onclick="cls()">
-            Agregar
-        </button>
+        <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#modalEmpleado" onclick="cls()">Agregar</button>
+        <button type="button" name="btn_puestos" id="btn_puestos"  onclick="location.href='puestos.jsp';" class="btn btn-primary">Puestos</button>
         
         <div class="modal fade" id="modalEmpleado" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
             <div class="modal-dialog">
@@ -69,7 +73,6 @@
                         
                         <label for="lbl_dpi"><b>DPI</b></label>
                         <input type="txt" name="txt_dpi" id="txt_dpi" placeholder="Ejemplo: xxxxxxxxxxxxx" class="form-control" required>
-                        
                         
                         <lable for="lbl_sexo"><b>Genero</b></lable>
                         <select name ="drop_genero" id="drop_genero" class="form-select">
@@ -111,34 +114,7 @@
             </div>
         </div>
        </div>
-        <!--
-        <div class="contanier mt-3">
-            <h3 style="text-align:center">Tabla de Empleados registrados</h3>
-            <br>
-            <table class="table table-hover">
-                <thead>
-                    <tr>
-                      <th>Nombres</th>
-                      <th>Apellidos</th>
-                      <th>Direccion</th>
-                      <th>Telefono</th>
-                      <th>DPI</th>
-                      <th>Genero</th>
-                      <th>Puesto</th>
-                      <th>Fecha nacimiento</th>
-                      <th>Fecha inicio labores</th>
-                      <th>Fecha ingreso</th>
-                    </tr>
-                  </thead>
-                  <tbody id="tbl_empleados">
-                    
-                        
-                    
-                  </tbody>
-              </table>
-          
-        </div>
-        -->
+        
         <br><!-- tabla -->
         <h3 style="text-align: center">Tabla Empleados</h3>
         
@@ -182,26 +158,17 @@
         </table>
         
 
-        <footer>
-            <footer style="background-color: #ff3333">
-            <div style="border-width: 2px; border-style: solid;border-color: #999999">
-                
-                <nav class="navbar navbar-expand-sm bg-light justify-content-center" style="padding-top: 15px;padding-bottom: 15px">
-                     <ul class="nav nav-tabs">
-                         <li class="nav item"><a class="nav-link" href="#"> Quienes Somos </a></li>
-                         <li class="nav item"> <a class="nav-link" href="#"> Siguenos en Twitter</a> </li>
-                         <li class="nav item"> <a class="nav-link" href="#"> Siguenos en Tiktok </a></li>
-                     </ul>
-                 </nav>     
-            </div>
-            <p style="font-family: times new roman; color: #ffffff">
-                Creado por Christian Sapon (c) 2022 Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce venenatis, nisl in viverra semper, nibh quam efficitur augue, et elementum ex dui eu libero. Maecenas pretium massa nibh, a dictum leo commodo tincidunt. Duis aliquet ornare ex ac ultricies. Aliquam ligula nibh, pellentesque a cursus nec, scelerisque ac nunc. Proin laoreet non purus et aliquet. Aenean vel euismod purus. Donec tempor diam a pretium dictum. Ut augue lacus, consectetur sit amet bibendum eget, euismod non nulla. Ut quis justo vel nibh consequat ullamcorper et et sapien. Nullam nec scelerisque nisi. Phasellus venenatis facilisis imperdiet. Vivamus ut felis non dolor pellentesque ornare.
-            </p>
-           
-        </footer>
-            </footer>
+        
+    
+        
                
         </div>
+    <footer class="text-center text-white fixed-bottom" style="background-color:#BFBFBF;">
+    <div class="text-center p-3">
+    © 2022 Copyright:
+    <a class="text-white" href="https://okdiario.com/img/2022/01/21/5-rasgos-que-definen-la-personalidad-de-los-gatos.jpg" target="_blank">Grupo 3</a>
+    </div>   
+    </footer>
         
          <script src="https://code.jquery.com/jquery-3.6.1.slim.js" integrity="sha256-tXm+sa1uzsbFnbXt8GJqsgi2Tw+m4BLGDof6eUPjbtk=" crossorigin="anonymous"></script>           
         <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js" integrity="sha384-IQsoLXl5PILFhosVNubq5LC7Qb9DXgDA9i+tQ8Zj3iwWAwPtgFTxbJ8NT4GN1R8p" crossorigin="anonymous"></script>
