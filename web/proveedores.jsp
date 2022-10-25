@@ -74,17 +74,17 @@
             <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
           </div>
           <div class="modal-body">
-          <form action="sr_proveedores" method="post">
+          <form action="sr_proveedor" method="post">
                 <label for="lbl_id">id</label>
                 <input  type="text" name="txt_id" id="txt_id" value="0" readonly class="form-control">
                 <label for="lbl_nombre_proveedor">Proveedor</label>
-                <input  type="text" name="txt_nombre_proveedor" id="txt_nombre_proveedor" class="form-control">
+                <input  type="text" name="txt_nombre_proveedor" id="txt_nombre_proveedor" class="form-control" required="">
                 <label for="lbl_nit">Nit</label>
-                <input  type="text" name="txt_nit_proveedor" id="txt_nit_proveedor" class="form-control">
+                <input  type="text" name="txt_nit_proveedor" id="txt_nit_proveedor" pattern="[0-9]{0,12}" title="Ingrese el nit sin guiones" class="form-control">
                 <label for="lbl_direccion">Direccion</label>
                 <input  type="text" name="txt_direccion_proveedor" id="txt_direccion_proveedor" class="form-control">
                 <label for="lbl_telefono">Telefono</label>
-                <input  type="text" name="txt_telefono_proveedor" id="txt_telefono_proveedor" class="form-control">   
+                <input  type="text" name="txt_telefono_proveedor" id="txt_telefono_proveedor" pattern="[0-9]{8}" class="form-control">   
         
            <div class="modal-footer">
             <button name="btn_agregar" id="btn_agregar" value="agregar" class="btn btn-primary">Agregar</button>

@@ -60,7 +60,7 @@ public class Cliente extends Persona{
     try{
     cn = new Conexion();
     cn.abrir_conexion();
-    String query = "select idclientes,nombres,apellidos,nit,case when genero = 0 then 'FEMENINO' when genero = 1 then 'MASCULINO' else 'Unknown'end as sexo,telefono,coreo_electronico, cast(fechaingreso as Date) as fechaingreso from clientes;";
+    String query = "select idclientes,nombres,apellidos,nit,case when genero = 0 then 'FEMENINO' when genero = 1 then 'MASCULINO' else 'Unknown'end as sexo,telefono,correo_electronico, cast(fechaingreso as Date) as fechaingreso from clientes;";
     ResultSet consulta = cn.conexionBD.createStatement().executeQuery(query);
     String encabezado[] = {"id","nombres","apellidos","nit","sexo","telefono","Correo","Fecha de Ingreso"};
     tabla.setColumnIdentifiers(encabezado);
@@ -72,7 +72,7 @@ public class Cliente extends Persona{
           datos[3] = consulta.getString("nit");
           datos[4] = consulta.getString("sexo");
           datos[5] = consulta.getString("telefono");
-          datos[6] = consulta.getString("coreo_electronico");
+          datos[6] = consulta.getString("correo_electronico");
           datos[7] = consulta.getString("fechaingreso");
           tabla.addRow(datos);
       }

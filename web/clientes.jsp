@@ -62,7 +62,7 @@
     <!-- Empieza el body-->
     
      <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#modal_cliente" onclick="limpiar()">
-        Agregar Ciente
+        Agregar Cliente
         </button>
 
 
@@ -74,7 +74,7 @@
             <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close" onclick="location.reload()"></button>
           </div>
           <div class="modal-body">
-              <form class="form-group" action="#" method="post">
+              <form class="form-group" action="sr_cliente" method="post">
                 <label for="lbl_id">id</label>
                 <input  type="text" name="txt_id" id="txt_id" class="form-control" value="0" readonly>
                 <label for="lbl_nombres">Nombres</label>
@@ -82,16 +82,16 @@
                 <label for="lbl_apellidos">Apellidos</label>
                 <input  type="text" name="txt_apellidos" class="form-control" id="txt_apellidos">
                 <label for="lbl_nit">Nit</label>   
-                <input  type="text" name="txt_nit" id="txt_nit" class="form-control">
+                <input  type="text" name="txt_nit" id="txt_nit" pattern="[0-9]{0,12}" title="Ingrese el nit sin guiones" class="form-control">
                 <label for="lbl_nit">Genero</label>
                 <select name="drop_genero" id="drop_genero" class="form-control">
                     <option value="0">Femenino</option>
-                    <option value="1">Maculino</option>
+                    <option value="1">Masculino</option>
                 </select>
                 <label for="lbl_telefono">Telefono</label>
-                <input  type="text" name="txt_telefono" id="txt_telefono" class="form-control">
+                <input  type="text" name="txt_telefono" id="txt_telefono" pattern="[0-9]{8}" class="form-control">
                 <label for="lbl_nit">Correo Electronico</label>
-                <input  type="text" name="txt_email" id="txt_email" class="form-control">
+                <input  type="text" name="txt_email" id="txt_email" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$" placeholder="usuario@dominio.com" class="form-control">
                 <label for="lbl_nit">Fecha de Ingreso</label>
                 <input  type="date" name="txt_date" id="txt_date" class="form-control">
                 <div class="modal-footer">

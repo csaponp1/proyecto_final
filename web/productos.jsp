@@ -85,7 +85,7 @@
                     <label for="lbl_existencia"><b>Existencia:</b></label>
                     <input type="text" name="txt_existencia" id="txt_existencia" class="form-control" placeholder="Ejemplo 0001" required>
                     <label for="lbl_fecha_ingreso"><b>Fecha de Ingreso:</b></label>
-                    <input type="datetime" name="txt_fecha_ingreso" id="txt_fecha_ingreso" class="form-control" placeholder="Ejemplo 12-12-1999" >
+                    <input type="datetime" name="txt_fecha_ingreso" id="txt_fecha_ingreso" class="form-control" placeholder="Ejemplo aaaa-mm-dd" >
                 
                      <br>
                      <button name="btn_agregar" id="btn_agregar" value="agregar" class="btn btn-primary">Agregar</button>

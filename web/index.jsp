@@ -72,7 +72,7 @@
                         <input type="txt" name="txt_tel" id="txt_tel" placeholder="Ejemplo: 33333333" class="form-control" required>
                         
                         <label for="lbl_dpi"><b>DPI</b></label>
-                        <input type="txt" name="txt_dpi" id="txt_dpi" placeholder="Ejemplo: xxxxxxxxxxxxx" class="form-control" required>
+                        <input type="txt" name="txt_dpi" id="txt_dpi" placeholder="Ejemplo: xxxxxxxxxxxxx" class="form-control" pattern=".{13}" title="ingrese 13 digitos" required>
                         
                         <lable for="lbl_sexo"><b>Genero</b></lable>
                         <select name ="drop_genero" id="drop_genero" class="form-select">
