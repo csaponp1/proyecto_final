@@ -12,6 +12,7 @@
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
         <title>Marcas</title>
         <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css" integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2" crossorigin="anonymous">
+        <link href="style.css" rel="stylesheet">
     </head>
     <body>
         
@@ -22,7 +23,7 @@
            
             <ul class="nav justify-content-center">
                 <li class="nav-item">
-                  <a class="nav-link" href="index.jsp">Empleados</a>
+                  <a class="nav-link" href="empleados.jsp">Empleados</a>
                 </li>
                 <li class="nav-item">
                   <a class="nav-link" href="puestos.jsp">Puestos</a>
@@ -39,6 +40,23 @@
                 <li class="nav-item">
                   <a class="nav-link disabled" href="marcas.jsp">Marcas</a>
                 </li>
+                
+                <div class="contenidousr">
+                    <a href="index.jsp">
+                    <div class = "icon">
+                        <span style="padding-left:10px;"></span>
+                        <img src="sdwn.png" alt="foto" width="2%" style="position: absolute; float: right"><span style="padding-left: 30px">Salir</span>
+                    </div>
+                    </a>
+                    <a href="index.jsp" target="_blank">
+                     <div class = "icon">
+                         <span style="padding-left:10px;"></span>
+                        <img src="settings.png" alt="foto" width="2%" style="position: absolute; float: right"><span style="padding-left: 30px">Settings</span>
+                     </div>
+                    </a>
+                    
+                </div> 
+                
             </ul>
 
         <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#modal_marca" onclick="limpiar()">Nuevo</button>

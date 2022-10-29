@@ -9,7 +9,14 @@ delete from puestos where idPuesto = ?;
 select p.idPuesto as id, p.puesto from puestos as p;
 */
 select *from marcas;
-SELECT p.idproductos AS id,p.producto,p.descripcion,p.imagen,p.precio_costo,p.precio_venta,p.existencia,p.fecha_ingreso,m.marca,m.idmarca FROM productos AS p INNER JOIN marcas AS m ON p.idmarca = m.idmarca;
+SELECT p.idproductos AS id,p.producto,p.descripcion,p.imagen,p.precio_costo,p.precio_venta,p.existencia,cast(fecha_ingreso as Date) as fecha_ingreso,m.marca,m.idmarca FROM productos AS p INNER JOIN marcas AS m ON p.idmarca = m.idmarca;
 select *from clientes;
 
-
+select *from productos;
+select *from ventas;
+/*
+select max(nofactura), v.*,c.*,e.* from ventas as v inner join clientes as c on v.idcliente = c.idclientes inner join empleados as e on v.idempleado=e.idempleado;
+select *from ventas_detalle;
+select *from ventas;
+select max(idventa) from ventas;
+*/

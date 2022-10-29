@@ -24,6 +24,10 @@
         <servlet-name>sr_marca</servlet-name>
         <servlet-class>controlador.sr_marca</servlet-class>
     </servlet>
+    <servlet>
+        <servlet-name>sr_login</servlet-name>
+        <servlet-class>controlador.sr_login</servlet-class>
+    </servlet>
     <servlet-mapping>
         <servlet-name>sr_empleado</servlet-name>
         <url-pattern>/sr_empleado</url-pattern>
@@ -47,6 +51,10 @@
     <servlet-mapping>
         <servlet-name>sr_marca</servlet-name>
         <url-pattern>/sr_marca</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>sr_login</servlet-name>
+        <url-pattern>/sr_login</url-pattern>
     </servlet-mapping>
     <session-config>
         <session-timeout>

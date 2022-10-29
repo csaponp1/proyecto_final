@@ -14,6 +14,7 @@
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
         <title>Productos</title>
         <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css" integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2" crossorigin="anonymous">
+        <link href="style.css" rel="stylesheet">
     </head>
     <body>
         <div class="container">
@@ -22,7 +23,7 @@
             </header>
         <ul class="nav justify-content-center">
                 <li class="nav-item">
-                  <a class="nav-link" href="index.jsp">Empleados</a>
+                  <a class="nav-link" href="empleados.jsp">Empleados</a>
                 </li>
                 <li class="nav-item">
                   <a class="nav-link" href="puestos.jsp">Puestos</a>
@@ -37,8 +38,23 @@
                   <a class="nav-link disabled" href="productos.jsp">Productos</a>
                 </li>
                 <li class="nav-item">
-                  <a class="nav-link" href="marcas.jsp">Marcas</a>
+                  <a class="nav-link" href="marcas.jsp">Marcas</a>  
                 </li>
+                <div class="contenidousr">
+                    <a href="index.jsp">
+                    <div class = "icon">
+                        <span style="padding-left:10px;"></span>
+                        <img src="sdwn.png" alt="foto" width="2%" style="position: absolute; float: right"><span style="padding-left: 30px">Salir</span>
+                    </div>
+                    </a>
+                    <a href="index.jsp" target="_blank">
+                     <div class = "icon">
+                         <span style="padding-left:10px;"></span>
+                        <img src="settings.png" alt="foto" width="2%" style="position: absolute; float: right"><span style="padding-left: 30px">Settings</span>
+                     </div>
+                    </a>
+                    
+                </div>
             </ul>
             <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#modal_producto" onclick="limpiar()">Nuevo</button>
             <button type="button" name="btn_marcas" id="btn_marcas"  onclick="location.href='marcas.jsp';" class="btn btn-primary">Marcas</button>
@@ -85,7 +101,7 @@
                     <label for="lbl_existencia"><b>Existencia:</b></label>
                     <input type="text" name="txt_existencia" id="txt_existencia" class="form-control" placeholder="Ejemplo 0001" required>
                     <label for="lbl_fecha_ingreso"><b>Fecha de Ingreso:</b></label>
-                    <input type="datetime" name="txt_fecha_ingreso" id="txt_fecha_ingreso" class="form-control" placeholder="Ejemplo aaaa-mm-dd" >
+                    <input type="date" name="txt_fecha_ingreso" id="txt_fecha_ingreso" class="form-control" placeholder="Ejemplo aaaa-mm-dd" >
                 
                      <br>
                      <button name="btn_agregar" id="btn_agregar" value="agregar" class="btn btn-primary">Agregar</button>

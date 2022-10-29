@@ -1,0 +1,109 @@
+/*
+Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
+Click nbfs://nbhost/SystemFileSystem/Templates/Other/CascadeStyleSheet.css to edit this template
+*/
+/* 
+    Created on : 28/10/2022, 21:38:24
+    Author     : Sapón Pérez
+*/
+
+
+        
+.pie-form {
+    font-size: 90%;
+    text-align: center;    
+    margin-top: 15px;
+    }
+
+.pie-form a {
+    display: block;
+    text-decoration: none;
+    color: #9999ff;
+    margin-bottom: 3px;
+    font-weight:bold;
+    }
+
+.pie-form a:hover {
+    color: #0f4c75;
+    }
+    
+.contenidousr{
+        padding-left: 130px;
+    }
+    
+    .heading{
+    font-size: 35px;
+    font-weight: bold;
+    text-transform: uppercase;
+}
+
+.intro{
+    background-color: rgba(49, 34, 134, 0.349);
+    color: whitesmoke;
+    padding-left: 16px;
+    padding-bottom: 30px;
+    margin-bottom: 2%;
+}
+
+
+body{
+    font-family:Arial, Helvetica, sans-serif;
+}
+
+.prof{
+    font-size: 20px;
+    font-weight: lighter;
+}
+
+.contactinfo{
+    font-size: 15px;
+    padding-left: 16px;
+    padding-bottom: 30px;
+    padding-top: 10px;
+    background-color: rgba(240, 109, 2, 0.959);
+}
+
+.icon{
+    color:rgba(113, 125, 233, 0.733);
+    float: left;
+    margin-right: 20px;
+    }
+
+
+.date{
+    color: brown;
+    font-size: 18px;
+    font-weight: bold;
+}
+
+.social{
+    padding-left: 16px;
+}
+
+.skills ul li{
+    display: flex;
+    justify-content: space-between;
+    
+}
+
+.skills ul li .skill_prog{
+    width: 60%;
+    height: 5px;
+    position: relative;
+}
+
+.skills ul li .skill_prog span{
+    position: absolute;
+    height: 100%;
+    background: #8a0808;
+    padding-right: 50px;
+}
+
+.skill_name{
+    width: 4px;
+}
+
+.skill_per{
+    margin-right: 15px;
+}
+

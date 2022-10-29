@@ -14,6 +14,7 @@
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
         <title>Clientes</title>
         <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+        <link href="style.css" rel="stylesheet">
     </head>
     <body>
         
@@ -36,7 +37,7 @@
         <div class="collapse navbar-collapse" id="navbarSupportedContent">
           <ul class="nav justify-content-center">
                 <li class="nav-item">
-                  <a class="nav-link" href="index.jsp">Empleados</a>
+                  <a class="nav-link" href="empleados.jsp">Empleados</a>
                 </li>
                 <li class="nav-item">
                   <a class="nav-link" href="puestos.jsp">Puestos</a>
@@ -53,6 +54,22 @@
                 <li class="nav-item">
                   <a class="nav-link" href="marcas.jsp">Marcas</a>
                 </li>
+                
+                <div class="contenidousr">
+                    <a href="index.jsp">
+                    <div class = "icon">
+                        <span style="padding-left:10px;"></span>
+                        <img src="sdwn.png" alt="foto" width="2%" style="position: absolute; float: right"><span style="padding-left: 30px">Salir</span>
+                    </div>
+                    </a>
+                    <a href="index.jsp" target="_blank">
+                     <div class = "icon">
+                         <span style="padding-left:10px;"></span>
+                        <img src="settings.png" alt="foto" width="2%" style="position: absolute; float: right"><span style="padding-left: 30px">Settings</span>
+                     </div>
+                    </a>
+                    
+                </div>
             </ul>
         </div>
       </div>
@@ -85,8 +102,8 @@
                 <input  type="text" name="txt_nit" id="txt_nit" pattern="[0-9]{0,12}" title="Ingrese el nit sin guiones" class="form-control">
                 <label for="lbl_nit">Genero</label>
                 <select name="drop_genero" id="drop_genero" class="form-control">
-                    <option value="0">Femenino</option>
-                    <option value="1">Masculino</option>
+                    <option value="0" >Femenino</option>
+                    <option value="1" >Masculino</option>
                 </select>
                 <label for="lbl_telefono">Telefono</label>
                 <input  type="text" name="txt_telefono" id="txt_telefono" pattern="[0-9]{8}" class="form-control">
@@ -170,7 +187,7 @@
                 $("#txt_date").val('');
     }
             var table = document.getElementById('tbl_clientes');
-                
+            
                 for(var i = 0; i < table.rows.length; i++)
                 {
                     table.rows[i].onclick = function()
@@ -181,11 +198,13 @@
                          document.getElementById("txt_nombres").value = this.cells[1].innerHTML;
                          document.getElementById("txt_apellidos").value = this.cells[2].innerHTML;
                          document.getElementById("txt_nit").value = this.cells[3].innerHTML;
-                         if(this.cells[4].innerHTML = 0){
+                         
+                        if(this.cells[4].innerHTML === "FEMENINO"){
                              document.getElementById("drop_genero").value = 0;       
                          } else{
                              document.getElementById("drop_genero").value = 1;
                          }
+                         
                          document.getElementById("txt_telefono").value = this.cells[5].innerHTML;
                          document.getElementById("txt_email").value = this.cells[6].innerHTML;
                          document.getElementById("txt_date").value = this.cells[7].innerHTML;

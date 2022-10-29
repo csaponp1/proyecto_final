@@ -14,6 +14,7 @@
         <title>Puestos</title>      
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+        <link href="style.css" rel="stylesheet">
     </head>
     <body>
         <div class="container">
@@ -25,7 +26,7 @@
             <!-- nav -->
                 <ul class="nav justify-content-center">
                 <li class="nav-item">
-                  <a class="nav-link" href="index.jsp">Empleados</a>
+                  <a class="nav-link" href="empleados.jsp">Empleados</a>
                 </li>
                 <li class="nav-item">
                   <a class="nav-link disabled" href="puestos.jsp">Puestos</a>
@@ -42,6 +43,28 @@
                 <li class="nav-item">
                   <a class="nav-link" href="marcas.jsp">Marcas</a>
                 </li>
+                
+                <div class="contenidousr">
+                    <a href="index.jsp">
+                    <div class = "icon">
+                        <span style="padding-left:10px;"></span>
+                        <img src="sdwn.png" alt="foto" width="2%" style="position: absolute; float: right"><span style="padding-left: 30px">Salir</span>
+                    </div>
+                    </a>
+                    <a href="index.jsp" target="_blank">
+                     <div class = "icon">
+                         <span style="padding-left:10px;"></span>
+                        <img src="settings.png" alt="foto" width="2%" style="position: absolute; float: right"><span style="padding-left: 30px">Settings</span>
+                     </div>
+                    </a>
+                    
+                </div>
+                <li>
+                <a class="navbar-brand" href="aboutme.html">
+                    <img src="avatar-icon-fashion-men-vector-avatar.jpg" alt="Avatar Logo" style="width:40px;" class="rounded-pill"> 
+                </a>
+                </li>
+                
             </ul>
         
         <!-- Inicio formulario -->
@@ -49,7 +72,7 @@
         <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#modalPuestos" onclick="cls()">
             Agregar
         </button>
-        <button type="button" name="btn_empleados" id="btn_empleados"  onclick="location.href='index.jsp';" class="btn btn-primary">Empleados</button>
+        <button type="button" name="btn_empleados" id="btn_empleados"  onclick="location.href='empleados.jsp';" class="btn btn-primary">Empleados</button>
             
             <div class="modal fade" id="modalPuestos" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
             <div class="modal-dialog">

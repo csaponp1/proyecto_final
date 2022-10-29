@@ -43,7 +43,7 @@ public class sr_empleado extends HttpServlet {
             
             if("agregar".equals(request.getParameter("btn_agregar"))){
                     if(empleado.agregar()>0){
-                    response.sendRedirect("index.jsp");
+                    response.sendRedirect("empleados.jsp");
                 }
                 else{
                     out.println("<h1>xxxErrorXXxxx</h1>");
@@ -52,7 +52,7 @@ public class sr_empleado extends HttpServlet {
             
             if("modificar".equals(request.getParameter("btn_modificar"))){
                     if(empleado.modificar()>0){
-                    response.sendRedirect("index.jsp");
+                    response.sendRedirect("empleados.jsp");
                 }
                 else{
                     out.println("<h1>xxxErrorXXxxx</h1>");
@@ -61,7 +61,7 @@ public class sr_empleado extends HttpServlet {
             
             if("eliminar".equals(request.getParameter("btn_eliminar"))){
                     if(empleado.eliminar()>0){
-                    response.sendRedirect("index.jsp");
+                    response.sendRedirect("empleados.jsp");
                 }
                 else{
                     out.println("<h1>xxxErrorXXxxx</h1>");
