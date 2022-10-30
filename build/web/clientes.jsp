@@ -110,10 +110,10 @@
                 <label for="lbl_nit">Correo Electronico</label>
                 <input  type="text" name="txt_email" id="txt_email" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$" placeholder="usuario@dominio.com" class="form-control">
                 <label for="lbl_nit">Fecha de Ingreso</label>
-                <input  type="date" name="txt_date" id="txt_date" class="form-control">
+                <input  type="text" name="txt_date" id="txt_date" class="form-control" value="" placeholder="el sistema lo agrega automatico">
                 <div class="modal-footer">
-                    <button name="btn_agregar" id="btn_agregar" value="agregar" class="btn btn-primary">Agregar</button>
-                    <button name="btn_modificar" id="btn_modificar" class="btn btn-success" value="modificar">Modificar</button>
+                    <button name="btn_agregar" id="btn_agregar" value="agregar" class="btn btn-primary" onclick="displayDate()">Agregar</button>
+                    <button name="btn_modificar" id="btn_modificar" class="btn btn-success" value="modificar" onclick="displayDate()">Modificar</button>
                     <button name="btn_eliminar" id="btn_eliminar" class="btn btn-danger" value="eliminar">Eliminar</button>
                 </div>
             </form>
@@ -211,6 +211,15 @@
                          $("#modal_cliente").modal('show');
                     };
                 }
+        </script>
+        <script type="text/javascript">
+                        function displayDate() {
+                        let date = new Date();
+                        var dateString=(date.toISOString().split('T')[0]);
+                        var dateString1 = date.toLocaleTimeString();
+
+                        document.getElementById("txt_date").value = [dateString + " " + dateString1];
+                        };
         </script>
     </body>
 </html>

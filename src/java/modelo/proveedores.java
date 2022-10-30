@@ -7,6 +7,7 @@ package modelo;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
+import java.util.HashMap;
 import javax.swing.table.DefaultTableModel;
 
 /**
@@ -145,6 +146,48 @@ public class proveedores {
             System.out.println(ex.getMessage());
         }
     return retorno;
+    }
+    
+    public HashMap drop_proveedor(){
+        HashMap<String,String> drop = new HashMap();
+        try{
+            cn = new Conexion();
+            String query = "select idproveedores as id, proveedor from proveedores;";
+            cn.abrir_conexion();
+            ResultSet consulta = cn.conexionBD.createStatement().executeQuery(query);
+            while (consulta.next()){
+                drop.put(consulta.getString("id"), consulta.getString("proveedor"));
+            }
+            cn.cerrar_conexion();
+        }catch(SQLException ex){
+            System.out.println("xxxXXXerror al hacer selectXXXxxx"+ex.getMessage());
+        }
+        return drop;
+    }
+    
+    public DefaultTableModel leer(int valor) throws SQLException{
+    DefaultTableModel tabla = new DefaultTableModel();
+    try{
+    cn = new Conexion();
+    cn.abrir_conexion();
+    String query = "SELECT * FROM proveedores where idproveedores ='"+ valor +"';";
+    ResultSet consulta = cn.conexionBD.createStatement().executeQuery(query);
+    String encabezado[] = {"id","proveedor","nit","direccion","telefono"};
+    tabla.setColumnIdentifiers(encabezado);
+      String datos[] = new String[5];
+      while (consulta.next()){
+          datos[0] = consulta.getString("idproveedores");
+          datos[1] = consulta.getString("proveedor");
+          datos[2] = consulta.getString("nit");
+          datos[3] = consulta.getString("direccion");
+          datos[4] = consulta.getString("telefono");
+          tabla.addRow(datos);
+      }
+        cn.cerrar_conexion();
+    }catch(SQLException ex){
+    System.out.println(ex.getMessage());
+    }
+    return tabla;
     }
     
 }

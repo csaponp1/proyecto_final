@@ -5,7 +5,9 @@
         <group>
             <file>file:/C:/Users/willy/Documents/NetBeansProjects/web_proyecto_final/web/empleados.jsp</file>
             <file>file:/C:/Users/willy/Documents/NetBeansProjects/web_proyecto_final/web/index.jsp</file>
-            <file>file:/C:/Users/willy/Documents/NetBeansProjects/web_proyecto_final/src/java/controlador/sr_empleado.java</file>
+            <file>file:/C:/Users/willy/Documents/NetBeansProjects/web_proyecto_final/src/java/modelo/proveedores.java</file>
+            <file>file:/C:/Users/willy/Documents/NetBeansProjects/web_proyecto_final/web/compras.jsp</file>
+            <file>file:/C:/Users/willy/Documents/NetBeansProjects/web_proyecto_final/src/java/modelo/Marca.java</file>
         </group>
     </open-files>
 </project-private>

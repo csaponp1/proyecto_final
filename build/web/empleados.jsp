@@ -128,11 +128,11 @@
                         <input type="date" name="date_f-inicio" id="date_f-inicio" class="form-control">
                         
                         <label for="lbl_f-ingreso"><b>Fecha ingreso</b></label>
-                        <input type="date" name="date_f-ingreso" id="date_f-ingreso" class="form-control" value="">
+                        <input type="text" name="date_f-ingreso" id="date_f-ingreso" class="form-control" value="" placeholder="el sistema lo ingresa automatico">
                        
                 
-                        <br><button name="btn_agregar" id="btn_agregar" value="agregar" class="btn btn-primary">Agregar</button>
-                            <button name="btn_modificar" id="btn_modificar" value="modificar" class="btn btn-success">Modificar</button>
+                        <br><button name="btn_agregar" id="btn_agregar" value="agregar" class="btn btn-primary" onclick="displayDate()">Agregar</button>
+                        <button name="btn_modificar" id="btn_modificar" value="modificar" class="btn btn-success" onclick="displayDate()">Modificar</button>
                             <button name="btn_eliminar" id="btn_eliminar" value="eliminar" class="btn btn-danger" onclick="javascript:if(!confirm('¿Desea Eliminar?'))return false" >Eliminar</button>
                             <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
                     
@@ -198,7 +198,7 @@
     </div>   
     </footer>
         
-         <script src="https://code.jquery.com/jquery-3.6.1.slim.js" integrity="sha256-tXm+sa1uzsbFnbXt8GJqsgi2Tw+m4BLGDof6eUPjbtk=" crossorigin="anonymous"></script>           
+        <script src="https://code.jquery.com/jquery-3.6.1.slim.js" integrity="sha256-tXm+sa1uzsbFnbXt8GJqsgi2Tw+m4BLGDof6eUPjbtk=" crossorigin="anonymous"></script>           
         <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js" integrity="sha384-IQsoLXl5PILFhosVNubq5LC7Qb9DXgDA9i+tQ8Zj3iwWAwPtgFTxbJ8NT4GN1R8p" crossorigin="anonymous"></script>
         <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.min.js" integrity="sha384-cVKIPhGWiC2Al4u+LWgxfKTRIcfu0JTxR+EQDz/bgldoEyl4H0zUF0QKbrJ0EcQF" crossorigin="anonymous"></script>
         <script type="text/javascript">
@@ -246,7 +246,16 @@
                             $("#drop_puesto").val(1);
                  
                         }
-
                     </script>
+                    <script type="text/javascript">
+                        function displayDate() {
+                        let date = new Date();
+                        var dateString=(date.toISOString().split('T')[0]);
+                        var dateString1 = date.toLocaleTimeString();
+
+                        document.getElementById("date_f-ingreso").value = [dateString + " " + dateString1];
+                        };
+                    </script>
+                    
     </body>
 </html>
