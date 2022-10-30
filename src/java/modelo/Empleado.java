@@ -8,6 +8,7 @@ import java.awt.HeadlessException;
 import java.sql.ResultSet;
 import java.sql.PreparedStatement;
 import java.sql.SQLException;
+import java.util.HashMap;
 import javax.swing.table.DefaultTableModel;
 
 /**
@@ -174,6 +175,24 @@ public class Empleado extends Persona{
             retorno = 0;
         }
         return retorno;
+    }
+    
+    public HashMap drop_empleado(){
+        HashMap <String, String> drop = new HashMap();
+        try {
+            cn = new Conexion();
+            String query = "SELECT idempleado as idempleado, concat_ws(' ', nombres, apellidos) as nombre FROM empleados;";
+            cn.abrir_conexion();
+            ResultSet consulta = cn.conexionBD.createStatement().executeQuery(query);
+            while (consulta.next()){
+                drop.put(consulta.getString("idempleado"), consulta.getString("nombre"));
+            }
+            cn.cerrar_conexion();
+        
+        }catch(SQLException ex){
+            System.out.println(ex.getMessage());
+        }
+        return drop;
     }
     
 

@@ -4,7 +4,7 @@
     Author     : Sapón Pérez
 --%>
 <%@page import="javax.swing.table.DefaultTableModel"%>
-<%@page import="modelo.proveedores" %>
+<%@page import="modelo.Proveedor" %>
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
 <!DOCTYPE html>
 <html>
@@ -130,7 +130,7 @@
             </thead>
             <tbody id="tbl_clientes">
             <% 
-            proveedores proveedor = new proveedores();
+            Proveedor proveedor = new Proveedor();
             DefaultTableModel tabla = new DefaultTableModel();
             tabla = proveedor.leer();
             for (int t =0;t<tabla.getRowCount();t++){

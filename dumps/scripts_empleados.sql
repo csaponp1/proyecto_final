@@ -12,4 +12,9 @@ delete from puestos where idPuesto = ?;
 select p.idPuesto as id, p.puesto from puestos as p;
 */
 
+select *from proveedores;
+select idproveedores as id, proveedor from proveedores order by id;
+SELECT * FROM proveedores where idproveedores ='5';
 
+
+select p.idproductos as id,p.producto, m.marca, p.descripcion, p.existencia, p.fecha_ingreso from productos as p inner join marcas as m on p.idmarca=m.idmarca where idproductos = 1;

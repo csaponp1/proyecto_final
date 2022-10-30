@@ -10,7 +10,7 @@ import javax.servlet.ServletException;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
-import modelo.proveedores;
+import modelo.Proveedor;
 
 /**
  *
@@ -27,7 +27,7 @@ public class sr_proveedor extends HttpServlet {
      * @throws ServletException if a servlet-specific error occurs
      * @throws IOException if an I/O error occurs
      */
-    proveedores proveedor;
+    Proveedor proveedor;
     protected void processRequest(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
         response.setContentType("text/html;charset=UTF-8");
@@ -39,7 +39,7 @@ public class sr_proveedor extends HttpServlet {
             out.println("<title>Servlet sr_proveedor</title>");            
             out.println("</head>");
             out.println("<body>");
-            proveedor = new proveedores(Integer.valueOf(request.getParameter("txt_id")),request.getParameter("txt_nombre_proveedor"),request.getParameter("txt_nit_proveedor"),request.getParameter("txt_direccion_proveedor"),request.getParameter("txt_telefono_proveedor"));
+            proveedor = new Proveedor(Integer.valueOf(request.getParameter("txt_id")),request.getParameter("txt_nombre_proveedor"),request.getParameter("txt_nit_proveedor"),request.getParameter("txt_direccion_proveedor"),request.getParameter("txt_telefono_proveedor"));
             
             if ("agregar".equals(request.getParameter("btn_agregar"))){
                 if (proveedor.agregar()>0){

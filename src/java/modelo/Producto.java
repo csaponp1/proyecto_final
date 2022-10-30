@@ -7,6 +7,7 @@ package modelo;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
+import java.util.HashMap;
 import javax.swing.table.DefaultTableModel;
 
 /**
@@ -216,5 +217,23 @@ public class Producto{
             retorno =0;
         }
         return retorno;
+    }
+    
+    public HashMap drop_producto(){
+        HashMap <String, String> drop = new HashMap();
+        try {
+            cn = new Conexion();
+            String query = "SELECT idproductos as idproductos, descripcion FROM productos;";
+            cn.abrir_conexion();
+            ResultSet consulta = cn.conexionBD.createStatement().executeQuery(query);
+            while (consulta.next()){
+                drop.put(consulta.getString("idproductos"), consulta.getString("descripcion"));
+            }
+            cn.cerrar_conexion();
+        
+        }catch(SQLException ex){
+            System.out.println(ex.getMessage());
+        }
+        return drop;
     }
 }

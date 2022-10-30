@@ -47,6 +47,10 @@
                   <a class="nav-link" href="marcas.jsp">Marcas</a>
                 </li>
                 
+                <li class="nav-item">
+                  <a class="nav-link" href="compras.jsp">Compras</a>
+                </li>
+                
                 <div class="contenidousr">
                     <a href="index.jsp">
                     <div class = "icon">
