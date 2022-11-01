@@ -28,6 +28,14 @@
         <servlet-name>sr_login</servlet-name>
         <servlet-class>controlador.sr_login</servlet-class>
     </servlet>
+    <servlet>
+        <servlet-name>sr_venta</servlet-name>
+        <servlet-class>controlador.sr_venta</servlet-class>
+    </servlet>
+    <servlet>
+        <servlet-name>sr_ventas_detalle</servlet-name>
+        <servlet-class>controlador.sr_ventas_detalle</servlet-class>
+    </servlet>
     <servlet-mapping>
         <servlet-name>sr_empleado</servlet-name>
         <url-pattern>/sr_empleado</url-pattern>
@@ -55,6 +63,14 @@
     <servlet-mapping>
         <servlet-name>sr_login</servlet-name>
         <url-pattern>/sr_login</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>sr_venta</servlet-name>
+        <url-pattern>/sr_venta</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>sr_ventas_detalle</servlet-name>
+        <url-pattern>/sr_ventas_detalle</url-pattern>
     </servlet-mapping>
     <session-config>
         <session-timeout>

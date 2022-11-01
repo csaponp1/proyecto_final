@@ -48,20 +48,20 @@
                     <a href="index.jsp">
                     <div class = "icon">
                         <span style="padding-left:10px;"></span>
-                        <img src="sdwn.png" alt="foto" width="2%" style="position: absolute; float: right"><span style="padding-left: 30px">Salir</span>
+                        <img src="recursos/sdwn.png" alt="foto" width="2%" style="position: absolute; float: right"><span style="padding-left: 30px">Salir</span>
                     </div>
                     </a>
                     <a href="index.jsp" target="_blank">
                      <div class = "icon">
                          <span style="padding-left:10px;"></span>
-                        <img src="settings.png" alt="foto" width="2%" style="position: absolute; float: right"><span style="padding-left: 30px">Settings</span>
+                        <img src="recursos/settings.png" alt="foto" width="2%" style="position: absolute; float: right"><span style="padding-left: 30px">Settings</span>
                      </div>
                     </a>
                     
                 </div>
                 <li>
                 <a class="navbar-brand" href="aboutme.html">
-                    <img src="avatar-icon-fashion-men-vector-avatar.jpg" alt="Avatar Logo" style="width:40px;" class="rounded-pill"> 
+                    <img src="recursos/avatar-icon-fashion-men-vector-avatar.jpg" alt="Avatar Logo" style="width:40px;" class="rounded-pill"> 
                 </a>
                 </li>
                 

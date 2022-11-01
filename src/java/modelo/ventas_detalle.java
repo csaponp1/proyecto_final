@@ -17,7 +17,7 @@ public class ventas_detalle {
     int id_venta, id_producto, p_unitario,existencia;
     String cantidad;
 
-    public ventas_detalle() {}
+    public ventas_detalle(){};
 
     public ventas_detalle(int id_venta, int id_producto, int p_unitario, int existencia, String cantidad) {
         this.id_venta = id_venta;

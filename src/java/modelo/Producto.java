@@ -219,6 +219,30 @@ public class Producto{
         return retorno;
     }
     
+    public DefaultTableModel leer_tabla() throws SQLException{
+    DefaultTableModel tabla = new DefaultTableModel();
+    try{
+    cn = new Conexion();
+    cn.abrir_conexion();
+    String query = "SELECT idproductos,descripcion,precio_venta,existencia FROM productos;";
+    ResultSet consulta = cn.conexionBD.createStatement().executeQuery(query);
+    String encabezado[] = {"id","cantidad","descripcion","precio_unitario","existencia"};
+    tabla.setColumnIdentifiers(encabezado);
+      String datos[] = new String[4];
+      while (consulta.next()){
+          datos[0] = consulta.getString("idproductos");
+          datos[1] = consulta.getString("descripcion");
+          datos[2] = consulta.getString("precio_venta");
+          datos[3] = consulta.getString("existencia");
+          tabla.addRow(datos);
+      }
+        cn.cerrar_conexion();
+    }catch(SQLException ex){
+    System.out.println("xxxError al hacer la Consulta(s)xxx"+ex.getMessage());
+    }
+    return tabla;
+    }
+    
     public HashMap drop_producto(){
         HashMap <String, String> drop = new HashMap();
         try {

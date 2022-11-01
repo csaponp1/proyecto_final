@@ -22,7 +22,7 @@
               <div class="col-sm-6 text-black">
                 <div class="px-5 ms-xl-4">
                   <i class="fas fa-crow fa-2x me-3 pt-5 mt-xl-4" style="color: #709085;"></i>
-                  <img src="despensafeliz.png" class="rounded mx-auto d-block"  width="200" height="200" alt="Imagen no encontrada">
+                  <img src="recursos/despensafeliz.png" class="rounded mx-auto d-block"  width="200" height="200" alt="Imagen no encontrada">
                 </div>
                 <div class="d-flex align-items-center h-custom-2 px-5 ms-xl-4 mt-5 pt-5 pt-xl-0 mt-xl-n5">
 
@@ -42,14 +42,13 @@
                           <button class="btn btn-outline-secondary btn-sm btn-block" id="btn_login" name="btn_login" value="login">Iniciar Sesion</button>
                       </div>
                   </form>
-                    <button onclick="displayDate()">The time is?</button>
-                    <p id="demo"></p>
+                    
                         
                    </div>
 
               </div>
               <div class="col-sm-6 px-0 d-none d-sm-block">
-                <img src="tienda.jpg" alt="Login image" class="w-100 vh-100" style="object-fit: cover; object-position: left;">
+                <img src="recursos/tienda.jpg" alt="Login image" class="w-100 vh-100" style="object-fit: cover; object-position: left;">
               </div>
             </div>
           </div>
@@ -62,15 +61,8 @@
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js" integrity="sha384-IQsoLXl5PILFhosVNubq5LC7Qb9DXgDA9i+tQ8Zj3iwWAwPtgFTxbJ8NT4GN1R8p" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.min.js" integrity="sha384-cVKIPhGWiC2Al4u+LWgxfKTRIcfu0JTxR+EQDz/bgldoEyl4H0zUF0QKbrJ0EcQF" crossorigin="anonymous"></script>    
     <script src="C:\Users\willy\Documents\NetBeansProjects\web_proyecto_final\web\js\moment.js" crossorigin="anonymous"></script>
-    <script type="text/javascript">
-    function displayDate() {
-    let date = new Date();
-    var dateString=(date.toISOString().split('T')[0]);
-    var dateString1 = date.toLocaleTimeString();
     
-    document.getElementById("demo").innerHTML = [dateString + " " + dateString1];
-    }
-    </script>
+    
     
     </body>
     <footer class="text-center text-white fixed-bottom" style="background-color: #7ACBEB">

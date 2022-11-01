@@ -10,11 +10,25 @@ insert into puestos (puesto) values (?);
 update puestos set puesto = ? where idPuesto = ?;
 delete from puestos where idPuesto = ?;
 select p.idPuesto as id, p.puesto from puestos as p;
+select p.idproductos as id,p.producto, m.marca, p.descripcion, p.existencia, p.fecha_ingreso,p.precio_costo from prod	uctos as p inner join marcas as m on p.idmarca=m.idmarca;
 */
 
 select *from proveedores;
 select idproveedores as id, proveedor from proveedores order by id;
 SELECT * FROM proveedores where idproveedores ='5';
+select *from productos;
+SELECT `ventas_detalle`.`idventas_detalle`,
+    `ventas_detalle`.`idventa`,
+    `ventas_detalle`.`idproducto`,
+    `ventas_detalle`.`cantidad`,
+    `ventas_detalle`.`precio_unitario`
+FROM `bd_final_csapon`.`ventas_detalle`;
+
+select *from ventas;
+
+SELECT (max(nofactura) + 1) as nofactura FROM ventas;
 
 
-select p.idproductos as id,p.producto, m.marca, p.descripcion, p.existencia, p.fecha_ingreso from productos as p inner join marcas as m on p.idmarca=m.idmarca where idproductos = 1;
+
+
+
