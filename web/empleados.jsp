@@ -48,7 +48,7 @@
                 </li>
                 
                 <li class="nav-item">
-                  <a class="nav-link" href="compras.jsp">Compras</a>
+                  <a class="nav-link" href="maestro_detalle_compras.jsp">Compras</a>
                 </li>
                 
                 <li class="nav-item">

@@ -1,0 +1,14 @@
+*Cambios realizados*
+
+la venta.jsp ya ingresa la fecha hora auto
+
+la compra.jsp ya ingresa la fehca hora auto
+
+YA ESTA CREADO LA CLASE COMPRA
+
+YA ESTA CREADO LA PAGINA COMPRAS.JSP
+
+YA ESTAN INDEXADAS LAS IMAGENES A CADA PAGINA JSP, NO MOVERLAS DE LA CARPETA DONDE ESTAN
+
+
+

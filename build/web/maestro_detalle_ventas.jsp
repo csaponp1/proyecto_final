@@ -87,7 +87,7 @@
                         </div>
                 </div>
                 <label class="form-label">Fecha de ingreso</label>
-                <input type="text" class="form-control" id="txt_fecha_ingreso" name="txt_fecha_ingreso" value="">
+                <input type="text" class="form-control" id="txt_fecha_ingreso" name="txt_fecha_ingreso" value="" readonly>
                 <p></p>
                 </div>
             </div>
@@ -164,7 +164,7 @@
                                     <%
                                         Producto producto = new Producto();
                                         DefaultTableModel tabla = new DefaultTableModel();
-                                        tabla = producto.leer_tabla();
+                                        tabla = producto.leer_tabla_ventas();
                                         for (int t = 0; t < tabla.getRowCount(); t++) {
                                             out.println("<tr>");
                                             out.println("<td>" + tabla.getValueAt(t, 0) + "</td>");

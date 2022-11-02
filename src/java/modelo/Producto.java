@@ -219,7 +219,7 @@ public class Producto{
         return retorno;
     }
     
-    public DefaultTableModel leer_tabla() throws SQLException{
+    public DefaultTableModel leer_tabla_ventas() throws SQLException{
     DefaultTableModel tabla = new DefaultTableModel();
     try{
     cn = new Conexion();
@@ -234,6 +234,31 @@ public class Producto{
           datos[1] = consulta.getString("descripcion");
           datos[2] = consulta.getString("precio_venta");
           datos[3] = consulta.getString("existencia");
+          tabla.addRow(datos);
+      }
+        cn.cerrar_conexion();
+    }catch(SQLException ex){
+    System.out.println("xxxError al hacer la Consulta(s)xxx"+ex.getMessage());
+    }
+    return tabla;
+    }
+    
+    public DefaultTableModel leer_tabla_compras() throws SQLException{
+    DefaultTableModel tabla = new DefaultTableModel();
+    try{
+    cn = new Conexion();
+    cn.abrir_conexion();
+    String query = "SELECT idproductos,descripcion,precio_costo,existencia,precio_venta FROM productos;";
+    ResultSet consulta = cn.conexionBD.createStatement().executeQuery(query);
+    String encabezado[] = {"id","cantidad","descripcion","precio_unitario","existencia","venta_unitario"};
+    tabla.setColumnIdentifiers(encabezado);
+      String datos[] = new String[5];
+      while (consulta.next()){
+          datos[0] = consulta.getString("idproductos");
+          datos[1] = consulta.getString("descripcion");
+          datos[2] = consulta.getString("precio_costo");
+          datos[3] = consulta.getString("existencia");
+          datos[4] = consulta.getString("precio_venta");
           tabla.addRow(datos);
       }
         cn.cerrar_conexion();

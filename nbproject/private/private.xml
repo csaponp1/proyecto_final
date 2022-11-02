@@ -3,7 +3,10 @@
     <editor-bookmarks xmlns="http://www.netbeans.org/ns/editor-bookmarks/2" lastBookmarkId="0"/>
     <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
         <group>
-            <file>file:/C:/Users/willy/Documents/NetBeansProjects/web_proyecto_final/src/java/modelo/Proveedor.java</file>
+            <file>file:/C:/Users/willy/Documents/NetBeansProjects/web_proyecto_final/web/productos.jsp</file>
+            <file>file:/C:/Users/willy/Documents/NetBeansProjects/web_proyecto_final/src/java/modelo/Producto.java</file>
+            <file>file:/C:/Users/willy/Documents/NetBeansProjects/web_proyecto_final/web/index.jsp</file>
+            <file>file:/C:/Users/willy/Documents/NetBeansProjects/web_proyecto_final/web/maestro_detalle_compras.jsp</file>
         </group>
     </open-files>
 </project-private>

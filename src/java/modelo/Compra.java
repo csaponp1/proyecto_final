@@ -115,6 +115,43 @@ public class Compra {
         return tabla;
     }
     
+    public String id_compra(){
+        
+        String idcompra=null;
+        
+        
+        try {   
+            cn = new Conexion();
+            String query = "SELECT (max(idcompra) + 1) as idCompra FROM compras;";
+            cn.abrir_conexion();
+            ResultSet consulta = cn.conexionBD.createStatement().executeQuery(query);
+            consulta.next();
+            idcompra = consulta.getString("idCompra");
+            cn.cerrar_conexion();
+        }catch(SQLException ex){
+            System.out.println(ex.getMessage());
+        }
+        return idcompra;
+    }
+    
+    public String id_compra_detalle(){
+        String idcompradetalle=null;
+        
+        try {   
+            cn = new Conexion();
+            String query = "SELECT (max(idcompra_detalle) + 1) as idDetalleCompra FROM compras_detalle;";
+            cn.abrir_conexion();
+            ResultSet consulta = cn.conexionBD.createStatement().executeQuery(query);
+            consulta.next();
+            idcompradetalle = consulta.getString("idDetalleCompra");
+            cn.cerrar_conexion();
+        }catch(SQLException ex){
+            System.out.println(ex.getMessage());
+        }
+        return idcompradetalle;
+    }
+    
+    
     
     
 }
