@@ -18,12 +18,35 @@
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
         <title>Ventas</title>
         <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+        <style>
+            .lista{
+                font-family: times new roman;
+                color: #666666;
+            }
+        </style>
     </head>
     <body>
+        
+            
             <header><h3>Ventas</h3></header>
             <p>
                 <a href="empleados.jsp" style="text-decoration: none" >Empleados</a>
             </p>
+            
+            <div class="container">
+            <section style=" text-align: center">
+                <p><b>Ventas de mercaderia</b></p>
+                <ul style="text-align: justify">
+                    <li class="lista">No debe tener un NIT para ingresar al Cliente</li>
+                    <li class="lista">Ingresar un Cliente nuevo si no encuentra el que necesita</li>
+                    <li class="lista">No debe tener un ID para ingresar al Empleado</li>
+                    <li class="lista">Ingresar un Empleado nuevo si no encuentra el que necesita</li>
+                    <li class="lista">La fecha de Venta debe de ingresarla obligatoriamente</li>
+                    <li class="lista">La fecha de ingreso es automatica</li>
+                </ul>
+             </section>
+        </div>
+            
             <form class="container" action="sr_venta" method="post">
                 
             <div class="row">

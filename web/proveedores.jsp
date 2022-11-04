@@ -84,11 +84,11 @@
     </button>
     
     <!-- Modal -->
-    <div class="modal fade" id="modal_proveedor" tabindex="-1" aria-labelledby="modal_proveedor" aria-hidden="true">
+    <div class="modal fade" id="modal_proveedor" tabindex="-1" data-bs-toggle="modal" aria-labelledby="modal_proveedor" aria-hidden="true">
       <div class="modal-dialog">
         <div class="modal-content">
           <div class="modal-header">
-            <h5 class="modal-title" id="exampleModalLabel">Agregar Cliente</h5>
+            <h5 class="modal-title" id="exampleModalLabel">Agregar Proveedor</h5>
             <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
           </div>
           <div class="modal-body">
@@ -107,7 +107,7 @@
            <div class="modal-footer">
             <button name="btn_agregar" id="btn_agregar" value="agregar" class="btn btn-primary">Agregar</button>
             <button name="btn_modificar" id="btn_modificar" value="modificar" class="btn btn-success">Modificar</button>
-            <button name="btn_eliminar" id="btn_eliminar" value="eliminar" class="btn btn-danger">Eliminar</button>
+            <button name="btn_eliminar" id="btn_eliminar" value="eliminar" class="btn btn-danger" onclick="javascript:if(!confirm('¿Desea Eliminar?'))return false">Eliminar</button>
            </div>
         </form>
                    

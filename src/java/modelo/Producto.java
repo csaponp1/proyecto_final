@@ -252,7 +252,7 @@ public class Producto{
     ResultSet consulta = cn.conexionBD.createStatement().executeQuery(query);
     String encabezado[] = {"id","cantidad","descripcion","precio_unitario","existencia","venta_unitario"};
     tabla.setColumnIdentifiers(encabezado);
-      String datos[] = new String[5];
+    String datos[] = new String[5];
       while (consulta.next()){
           datos[0] = consulta.getString("idproductos");
           datos[1] = consulta.getString("descripcion");

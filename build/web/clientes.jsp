@@ -83,7 +83,7 @@
         </button>
 
 
-    <div class="modal fade" id="modal_cliente" tabindex="-1" aria-labelledby="modal_cliente" aria-hidden="true">
+    <div class="modal fade" id="modal_cliente" tabindex="-1" data-bs-toggle="modal" aria-labelledby="modal_cliente" aria-hidden="true">
       <div class="modal-dialog">
         <div class="modal-content">
           <div class="modal-header">
@@ -114,7 +114,7 @@
                 <div class="modal-footer">
                     <button name="btn_agregar" id="btn_agregar" value="agregar" class="btn btn-primary" onclick="displayDate()">Agregar</button>
                     <button name="btn_modificar" id="btn_modificar" class="btn btn-success" value="modificar" onclick="displayDate()">Modificar</button>
-                    <button name="btn_eliminar" id="btn_eliminar" class="btn btn-danger" value="eliminar">Eliminar</button>
+                    <button name="btn_eliminar" id="btn_eliminar" class="btn btn-danger" value="eliminar" onclick="javascript:if(!confirm('¿Desea Eliminar?'))return false">Eliminar</button>
                 </div>
             </form>
           </div>
